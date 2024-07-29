@@ -1,14 +1,22 @@
+<<<<<<< HEAD
 
 Curriculum
 SE Foundations
 Average: 134.0%
+=======
+>>>>>>> origin/master
 0x11. C - printf
 C
 Group project
  Weight: 5
  Project to be done in teams of 2 people (your team: Vasitha Sulem, Nunkahon Guy-Brice Toueu)
+<<<<<<< HEAD
  Project will start Jul 26, 2024 4:00 AM, must end by Jul 31, 2024 4:00 AM
  Checker was released at Jul 27, 2024 10:00 AM
+=======
+ Project will start Jul 26, 2024 3:00 AM, must end by Aug 1, 2024 3:00 AM
+ Checker was released at Jul 27, 2024 3:00 PM
+>>>>>>> origin/master
  An auto review will be launched at the deadline
 Concepts
 For this project, we expect you to look at these concepts:
@@ -181,5 +189,173 @@ Repo:
 
 GitHub repository: printf
   
-Copyright © 2024 ALX, All rights reserved.
+=======
+2. With a face like mine, I do better in print
+#advanced
+Handle the following custom conversion specifiers:
 
+b: the unsigned int argument is converted to binary
+alex@ubuntu:~/c/printf$ cat main.c
+#include "main.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+    _printf("%b\n", 98);
+    return (0);
+}
+alex@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 main.c
+alex@ubuntu:~/c/printf$ ./a.out
+1100010
+alex@ubuntu:~/c/printf$
+Repo:
+
+GitHub repository: printf
+  
+3. What one has not experienced, one will never understand in print
+#advanced
+Handle the following conversion specifiers:
+
+u
+o
+x
+X
+You don’t have to handle the flag characters
+You don’t have to handle field width
+You don’t have to handle precision
+You don’t have to handle the length modifiers
+Repo:
+
+GitHub repository: printf
+  
+4. Nothing in fine print is ever good news
+#advanced
+Use a local buffer of 1024 chars in order to call write as little as possible.
+
+Repo:
+
+GitHub repository: printf
+  
+5. My weakness is wearing too much leopard print
+#advanced
+Handle the following custom conversion specifier:
+
+S : prints the string.
+Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by the ASCII code value in hexadecimal (upper case - always 2 characters)
+alex@ubuntu:~/c/printf$ cat main.c
+#include "main.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+    _printf("%S\n", "Best\nSchool");
+    return (0);
+}
+alex@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 main.c
+alex@ubuntu:~/c/printf$ ./a.out
+Best\x0ASchool
+alex@ubuntu:~/c/printf$
+Repo:
+
+GitHub repository: printf
+  
+6. How is the world ruled and led to war? Diplomats lie to journalists and believe these lies when they see them in print
+#advanced
+Handle the following conversion specifier: p.
+
+You don’t have to handle the flag characters
+You don’t have to handle field width
+You don’t have to handle precision
+You don’t have to handle the length modifiers
+Repo:
+
+GitHub repository: printf
+  
+7. The big print gives and the small print takes away
+#advanced
+Handle the following flag characters for non-custom conversion specifiers:
+
++
+space
+#
+Repo:
+
+GitHub repository: printf
+  
+8. Sarcasm is lost in print
+#advanced
+Handle the following length modifiers for non-custom conversion specifiers:
+
+l
+h
+Conversion specifiers to handle: d, i, u, o, x, X
+
+Repo:
+
+GitHub repository: printf
+  
+9. Print some money and give it to us for the rain forests
+#advanced
+Handle the field width for non-custom conversion specifiers.
+
+Repo:
+
+GitHub repository: printf
+  
+10. The negative is the equivalent of the composer's score, and the print the performance
+#advanced
+Handle the precision for non-custom conversion specifiers.
+
+Repo:
+
+GitHub repository: printf
+  
+11. It's depressing when you're still around and your albums are out of print
+#advanced
+Handle the 0 flag character for non-custom conversion specifiers.
+
+Repo:
+
+GitHub repository: printf
+  
+12. Every time that I wanted to give up, if I saw an interesting textile, print what ever, suddenly I would see a collection
+#advanced
+Handle the - flag character for non-custom conversion specifiers.
+
+Repo:
+
+GitHub repository: printf
+  
+13. Print is the sharpest and the strongest weapon of our party
+#advanced
+Handle the following custom conversion specifier:
+
+r : prints the reversed string
+Repo:
+
+GitHub repository: printf
+  
+14. The flood of print has turned reading into a process of gulping rather than savoring
+#advanced
+Handle the following custom conversion specifier:
+
+R: prints the rot13'ed string
+Repo:
+
+GitHub repository: printf
+  
+15. *
+#advanced
+All the above options work well together.
+
+Well done on completing this project! Let the world hear about this milestone achieved.
+
+Click here to tweet!
