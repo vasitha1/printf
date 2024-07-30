@@ -1,25 +1,13 @@
-<<<<<<< HEAD
-
 0x11. C - printf
 C
 Group project
  Weight: 5
  Project to be done in teams of 2 people (your team: Vasitha Sulem, Nunkahon Guy-Brice Toueu)
-<<<<<<< HEAD
- Project will start Jul 26, 2024 4:00 AM, must end by Jul 31, 2024 4:00 AM
- Checker was released at Jul 27, 2024 10:00 AM
-=======
- Project will start Jul 26, 2024 3:00 AM, must end by Aug 1, 2024 3:00 AM
- Checker was released at Jul 27, 2024 3:00 PM
->>>>>>> origin/master
- An auto review will be launched at the deadline
-Concepts
 For this project, we expect you to look at these concepts:
-=======
+
 # The _printf() function
 
 **_printf** - formatted output conversion
->>>>>>> refs/remotes/origin/master
 
 **#include "main.h"**
 **int _printf(const char** *format* **, ...);**
