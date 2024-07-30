@@ -57,9 +57,9 @@ int _print_integer(va_list args)
 		i = l;
 		count += 1;
 	}
-	while(i < 9)
+	while (i < 9)
 	{
-		i = i/10;
+		i = i / 10;
 		count++;
 	}
 
@@ -72,7 +72,7 @@ void _recursion_integer(int a)
 	unsigned int i;
 
 	i = a;
-	if(i/10)
-		_recursion_integer(i/10);
+	if (i / 10)
+		_recursion_integer(i / 10);
 	_write(i % 10 + '0');
 }
