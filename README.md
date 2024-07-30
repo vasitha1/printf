@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-Curriculum
-SE Foundations
-Average: 134.0%
-=======
->>>>>>> origin/master
 0x11. C - printf
 C
 Group project
