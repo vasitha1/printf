@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -28,5 +29,7 @@ int _print_int_binary(va_list args);
 void _recursion_int_binary(int a);
 int _print_invalid_spec(char prev_format, char format, int count);
 int _validate_char(char _type);
+int _print_integer(va_list args);
+void _recursion_integer(int a);
 
 #endif /* _ALX_SCHOOL */

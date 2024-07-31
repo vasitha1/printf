@@ -2,7 +2,7 @@
 
 /**
  * _printf - my printf function
- * @format: string whit format to print
+ * @format: string with format to print
  *
  * Return: number of chars that print
  */

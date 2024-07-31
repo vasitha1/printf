@@ -2,7 +2,7 @@
 
 /**
   * _print_all_format - Prints a format
-  * @format: The format to prints
+  * @format: The format to print
   * @args: A list of variadic arguments
   *
   * Return: The length of the format
@@ -40,7 +40,6 @@ int _print_all_format(const char *format, va_list args)
 		{
 			count += _write(format[i]);
 		}
-
 		i++;
 	}
 
@@ -62,6 +61,7 @@ int _print_spec(char format, va_list args)
 		{"s", _print_string},
 		{"d", _print_integer},
 		{"i", _print_integer},
+		{"b", _print_int_binary},
 		{NULL, NULL}
 	};
 
@@ -109,7 +109,7 @@ int _print_invalid_spec(char prev_format, char format, int count)
   */
 int _validate_char(char _type)
 {
-	char _types[] = {'c', 's', 'd', 'i', '%'};
+	char _types[] = {'c', 's', 'd', 'i', 'b', '%'};
 	int i = 0;
 
 	while (_types[i])

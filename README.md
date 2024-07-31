@@ -1,3 +1,10 @@
+0x11. C - printf
+C
+Group project
+ Weight: 5
+ Project to be done in teams of 2 people (your team: Vasitha Sulem, Nunkahon Guy-Brice Toueu)
+For this project, we expect you to look at these concepts:
+
 # The _printf() function
 
 **_printf** - formatted output conversion
