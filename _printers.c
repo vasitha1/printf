@@ -42,3 +42,51 @@ int _print_string(va_list args)
 	_write(')');
 	return (6);
 }
+
+/**
+ * _print_integer - prints a integer
+ * @args: A list of variadic arguments
+ *
+ * Return: The length of the string
+ */
+
+int _print_integer(va_list args)
+{
+	int count = 1, l = 0;
+	unsigned int i = 0;
+
+	i = va_arg(args, int);
+	l = i;
+	if (l < 0)
+	{
+		_write('-');
+		l = l * -1;
+		i = l;
+		count += 1;
+	}
+	while (i > 9)
+	{
+		i = i / 10;
+		count++;
+	}
+
+	_recursion_integer(l);
+	return (count);
+}
+
+/**
+ * _recursion_integer - prints a integer
+ * @a: integer to print
+ *
+ * Return: Nothing
+ */
+
+void _recursion_integer(int a)
+{
+	unsigned int i;
+
+	i = a;
+	if (i /10)
+		_recursion_integer(i / 10);
+	_write(i % 10 + '0');
+}
