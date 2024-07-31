@@ -45,34 +45,84 @@ int _print_string(va_list args)
 
 int _print_integer(va_list args)
 {
-	int count = 1, l = 0;
-	unsigned int i = 0;
+	int n = va_arg(args, int);
+	int num, last = n % 10, digit, exp = 1;
+	int i = 1;
 
-	i = va_arg(args, int);
-	l = i;
-	if (l < 0)
+	n = n / 10;
+	num = n;
+
+	if (last < 0)
 	{
 		_write('-');
-		l = l * -1;
-		i = l;
-		count += 1;
+		num = -num;
+		n = -n;
+		last = -last;
+		i++;
 	}
-	while (i < 9)
+	if (num > 0)
 	{
-		i = i / 10;
-		count++;
+		while (num / 10 != 0)
+		{
+			exp = exp * 10;
+			num = num / 10;
+		}
+		num = n;
+		while (exp > 0)
+		{
+			digit = num / exp;
+			_write(digit + '0');
+			num = num - (digit * exp);
+			exp = exp / 10;
+			i++;
+		}
 	}
+	_write(last + '0');
 
-	_recursion_integer(l);
-	return (count);
+	return (i);
 }
+/**
+ * _printf_decimal - prints decimal
+ * @args: argument to print
+ * Return: number of characters printed
+ */
 
-void _recursion_integer(int a)
+int _print_decimal(va_list args)
 {
-	unsigned int i;
+	int n = va _arg(args, int);
+	int num, last = n % 10, digit;
+	int i = 1;
+	int exp = 1;
 
-	i = a;
-	if (i / 10)
-		_recursion_integer(i / 10);
-	_write(i % 10 + '0');
+	n = n / 10;
+	num = n;
+
+	if (last < 0)
+	{
+		_write('-');
+		num = -num;
+		n = -n;
+		last = -last;
+		i++;
+	}
+	if (num > 0)
+	{
+		while (num / 10 != 0)
+		{
+			exp = exp * 10;
+			num = num / 10;
+		}
+		num = n;
+		while (exp > 0)
+		{
+			digit = num / exp;
+			_write(digit + '0');
+			num = num - (digit * exp);
+			exp = exp / 10;
+			i++;
+		}
+	}
+	_write(last + '0');
+
+	return (i);
 }
