@@ -1,10 +1,3 @@
-0x11. C - printf
-C
-Group project
- Weight: 5
- Project to be done in teams of 2 people (your team: Vasitha Sulem, Nunkahon Guy-Brice Toueu)
-For this project, we expect you to look at these concepts:
-
 # The _printf() function
 
 **_printf** - formatted output conversion
@@ -39,6 +32,12 @@ This function gets a variadic arguments list, traverses the list, prints each ch
 
 ### int _print_string (va_list args)
 This function gets a variadic arguments list, traverses the list, prints each string and returns the length of the string.
+
+### int _print_a_integer (va_list args)
+This function gets a variadic arguments list, traverses the list, prints each number of int type and returns the length of the integer.
+
+### int _print_decimal(va_list argsi)
+This function gets an integer and prints the last digit of the number as recursion is applied.
 
 ### int _print_all_format (const char *format, va_list args)
 This function gets a format to be printed and a variadic arguments list, next to check if the

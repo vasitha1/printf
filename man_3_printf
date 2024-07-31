@@ -1,4 +1,4 @@
-.TH _PRINTF 3 "Oct 31 2022" "Version 1.0" "_PRINTF"
+.TH _PRINTF 3 "July 31 2024" "Version 1.0" "_PRINTF"
 .SH NAME
 .B _printf
 - formatted output conversion
