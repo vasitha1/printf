@@ -43,11 +43,16 @@ int _print_string(va_list args)
 	return (6);
 }
 
+/**
+ * _print_integer - prints integer
+ * @args: argument to print
+ * Return: number of characters printed
+ */
 int _print_integer(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
-	int i = 1;
+	int  i = 1;
 
 	n = n / 10;
 	num = n;
@@ -81,6 +86,7 @@ int _print_integer(va_list args)
 
 	return (i);
 }
+
 /**
  * _printf_decimal - prints decimal
  * @args: argument to print
@@ -89,9 +95,9 @@ int _print_integer(va_list args)
 
 int _print_decimal(va_list args)
 {
-	int n = va _arg(args, int);
+	int n = va_arg(args, int);
 	int num, last = n % 10, digit;
-	int i = 1;
+	int  i = 1;
 	int exp = 1;
 
 	n = n / 10;

@@ -1,9 +1,4 @@
-The _printf() function
-_printf - formatted output conversion
-
-#include "main.h" int _printf(const char format , ...);
-Description
-The _printf() function produces output according to a format as described below. Also, it writes output to stdout, the standard output stream.
+# The _printf() function
 
 The  _printf() function writes the output under the control of a format string that specifies how subsequent arguments or arguments accessed via the variable-length argument facilities of stdarg(3) are converted for output.
 Format of the format string
@@ -20,8 +15,6 @@ int _write(char c)
 This function gets a char parameter and writes the parameter to the stdout, the standard output stream.
 int _print_char (va_list args)
 This function gets a variadic arguments list, traverses the list, prints each character of char type and returns the length of the character.
-int _print_string (va_list args)
-This function gets a variadic arguments list, traverses the list, prints each string and returns the length of the string.
 int _print_a_integer (va_list args)
 This function gets a variadic arguments list, traverses the list, prints each number of int type and returns the length of the integer.
 int _print_decimal(va_list argsi)
@@ -31,6 +24,23 @@ This function gets a format to be printed and a variadic arguments list, next to
 int _print_spec (char format, va_list args):
 This function gets a format valid to be printed and a variadic arguments list to find the format in the list and selects the appropriate function to execute and writes the format to the standard output stream and returns the length of the valid format.
 int _print_invalid_spec (char prev_format, char format, int count)
+
+### int _print_a_integer (va_list args)
+This function gets a variadic arguments list, traverses the list, prints each number of int type and returns the length of the integer.
+
+### int _print_decimal(va_list argsi)
+This function gets an integer and prints the last digit of the number as recursion is applied.
+
+### int _print_all_format (const char *format, va_list args)
+This function gets a format to be printed and a variadic arguments list, next to check if the
+format is valid or invalid and according with the verification the resulting output is written to the standard output stream and returns the format length.
+
+### int _print_spec (char format, va_list args):
+This function gets a format valid to be printed and a variadic arguments list to find the format in the
+list and selects the appropriate function to execute and writes the format to the standard output stream and returns the length of the valid format.
+
+### int _print_invalid_spec (char prev_format, char format, int count)
+
 This function gets the previous format of the current format, the actual format and the current count of printed characters. Next, the invalid format is written to the standard output stream and returns the length of the invalid format.
 int _validate_char(char _type)
 Gets a type and checks if the passed parameter is present in a structure of valid conversion specifiers. Next, returns if the parameter is valid or invalid.
