@@ -30,6 +30,6 @@ void _recursion_int_binary(int a);
 int _print_invalid_spec(char prev_format, char format, int count);
 int _validate_char(char _type);
 int _print_integer(va_list args);
-void _recursion_integer(int a);
+int _print_decimal(va_list args);
 
 #endif /* _ALX_SCHOOL */
