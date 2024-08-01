@@ -13,12 +13,16 @@ int _print_int_binary(va_list args)
 
 	new = va_arg(args, int);
 	x = new;
+	if (new == 0)
+	{
+		_write('0');
+		b += 1;
+		return (b);
+	}
 	if (new < 0)
 	{
-		_write('1');
 		new = new * -1;
 		x = new;
-		b += 1;
 	}
 	while (x > 0)
 	{
@@ -42,4 +46,6 @@ void _recursion_int_binary(int a)
 	if (t / 2)
 		_recursion_int_binary(t / 2);
 	_write(t % 2 + '0');
+
+
 }
