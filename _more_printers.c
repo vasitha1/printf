@@ -9,7 +9,8 @@
 int _print_int_binary(va_list args)
 {
 	unsigned int x = 0;
-	int b = 0, new = 0;
+	int b = 0;
+	int new = 0;
 
 	new = va_arg(args, int);
 	x = new;
@@ -19,11 +20,14 @@ int _print_int_binary(va_list args)
 		b += 1;
 		return (b);
 	}
-	if (new < 0)
+	if (new < 0 && sizeof(new) != sizeof(unsigned int))
 	{
-		new = new * -1;
-		x = new;
+		_write('%');
+		_write('b');
+		b += 2;
+		return (b);
 	}
+
 	while (x > 0)
 	{
 		x = x / 2;
